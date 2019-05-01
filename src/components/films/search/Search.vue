@@ -8,7 +8,7 @@
   </div>
 </template>
 <style lang="sass" scoped>
-  @import '../../styles'
+  @import '../../../styles'
   .search
     .search__no
       +flex($justify: center, $align: center)

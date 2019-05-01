@@ -25,7 +25,7 @@
 </style>
 
 <script>
-  import Login from '../../components/login/Login.vue'
+  import Login from '../login/Login.vue'
 
   export default {
     name: 'Header',

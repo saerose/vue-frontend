@@ -39,8 +39,8 @@
 </style>
 
 <script>
-  import FilmsList from '../../components/films-list/FilmsList'
-  import Search from '../../components/search/Search'
+  import FilmsList from './films-list/FilmsList'
+  import Search from './search/Search'
   export default {
     name: 'Films',
     data () {

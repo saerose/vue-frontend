@@ -6,7 +6,7 @@
 </template>
 
 <style lang="sass" scoped>
-  @import '../../styles'
+  @import '../../../styles'
   .films-list
     +flex($direction: row, $justify: space-between, $wrap: wrap)
     .films-list__no
