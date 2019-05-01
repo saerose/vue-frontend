@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <Banner></Banner>
+    <Genres></Genres>
   </div>
 </template>
 
@@ -20,12 +21,14 @@
 <script>
   import Header from './containers/header/Header.vue'
   import Banner from './components/banner/Banner.vue'
+  import Genres from './components/genres/Genres.vue'
 
   export default {
     name: 'app',
     components: {
       Header,
-      Banner
+      Banner,
+      Genres
     }
   }
 </script>
