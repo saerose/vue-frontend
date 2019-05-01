@@ -8,18 +8,6 @@
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './containers/header/Header.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-    Header
-  }
-}
-</script>
 
 <style>
 #app {
@@ -31,3 +19,16 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+<script>
+  import HelloWorld from './components/HelloWorld.vue'
+  import Header from './containers/header/Header.vue'
+
+  export default {
+    name: 'app',
+    components: {
+      HelloWorld,
+      Header
+    }
+  }
+</script>
