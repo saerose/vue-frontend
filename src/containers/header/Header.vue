@@ -28,7 +28,7 @@
   import Login from '../../components/login/Login.vue'
 
   export default {
-    name: 'app',
+    name: 'Header',
     components: {
       Login
     }
