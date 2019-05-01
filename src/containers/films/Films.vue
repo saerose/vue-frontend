@@ -5,11 +5,11 @@
         <div class="films__header-elements__title">Films</div>
         <div class="films__header-elements__filters">
           <div class="films__header-elements__filters-categories">Categories ↓</div>
-          <Search></Search>
+          <Search :updateList="this.update"></Search>
         </div>
       </div>
     </div>
-    <FilmsList></FilmsList>
+    <FilmsList :list="movieList"></FilmsList>
   </div>
 </template>
 
@@ -43,9 +43,19 @@
   import Search from '../../components/search/Search'
   export default {
     name: 'Films',
+    data () {
+      return {
+        movieList: []
+      }
+    },
     components: {
       FilmsList,
       Search
     },
+    methods: {
+      update (list) {
+        this.movieList = list
+      }
+    }
   }
 </script>

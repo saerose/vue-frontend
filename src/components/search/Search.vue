@@ -36,8 +36,12 @@
       return {
         showInput: false,
         userQuery: '',
-        baseUrl: `https://api.themoviedb.org/3/search/movie?api_key=${process.env.VUE_APP_API_KEY_V3}&language=en-US&query=${this.userQuery}&page=1&include_adult=false`
+        searchResponse: [],
+        genBaseUrl: () => `https://api.themoviedb.org/3/search/movie?api_key=${process.env.VUE_APP_API_KEY_V3}&language=en-US&query=${encodeURIComponent(this.userQuery)}&page=1&include_adult=false`
       }
+    },
+    props: {
+      updateList: Function
     },
     methods: {
       showSearchInput() {
@@ -45,11 +49,11 @@
       },
       search() {
         setTimeout(() => {
-          return fetch(this.baseUrl)
+          return fetch(this.genBaseUrl())
             .then((response) => response.json())
             .then((body) => {
-              console.log(body)
-              console.log(this.userQuery)
+              this.searchResponse = body.results;
+              this.updateList(this.searchResponse)
             })
             .catch(error => {
               this.error({

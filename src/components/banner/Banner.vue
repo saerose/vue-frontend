@@ -25,7 +25,8 @@
     overflow-x: hidden
     width: 100vw
     height: 70vh
-    margin: 0 calc(50% - 50vw)
+    margin-left: calc(50% - 50vw)
+    margin-right: calc(50% - 50vw)
     .banner__list-element
       z-index: -1
       flex: 0 0 auto
@@ -53,6 +54,7 @@
           .banner__list-element__content-info__overview
             font-size: 0.9em
         .banner__list-element__content-buttons
+          cursor: pointer
           .banner__list-element__content-buttons__element
             width: 14vw
             height: 7vh
