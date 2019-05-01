@@ -14,7 +14,7 @@
     padding: 1vw
     .genres-list__element
       width: 20vh
-      height: 8vh
+      height: 20vh
       padding: 2vh
       background-color: $magenta
       border-radius: 0.2em
