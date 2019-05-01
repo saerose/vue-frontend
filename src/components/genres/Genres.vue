@@ -43,7 +43,6 @@
           .then((response) => response.json())
           .then((body) => {
             this.genres = body.genres.slice(0, 6);
-            console.log(this.genres)
           })
           .catch(error => {
           this.error({
