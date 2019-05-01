@@ -6,20 +6,21 @@
 
 <style lang="sass" scoped>
   @import '../../styles'
-    .films-list
-      +flex($direction: row, $justify: space-between, $wrap: wrap)
-      .films-list__element
-        font-family: 'Source Sans Pro', sans-serif
-        color: $white
-        font-size: 1em
-        font-weight: 400
-        margin: 1vw 0
-        background-color: lavender
-        width: 29vw
-        height: 18vh
-        padding: 1vw
-        background-position: center
-        background-size: cover
+  .films-list
+    +flex($direction: row, $justify: space-between, $wrap: wrap)
+    .films-list__element
+      cursor: pointer
+      font-family: 'Source Sans Pro', sans-serif
+      color: $white
+      font-size: 1em
+      font-weight: 400
+      margin: 1vw 0
+      background-color: lavender
+      width: 29vw
+      height: 18vh
+      padding: 1vw
+      background-position: center
+      background-size: cover
 </style>
 
 <script>
