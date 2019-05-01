@@ -64,7 +64,11 @@
           .map(el => ({
             ...el,
             backdrop_path: {
-              'background-image': `linear-gradient(to bottom right,rgba(0,0,0,1),rgba(0,0,0,0)), url(http://image.tmdb.org/t/p/original${el.backdrop_path})`
+              'background-image': `linear-gradient(to bottom right,rgba(0,0,0,1),rgba(0,0,0,0)), ${
+                el.backdrop_path
+                  ? `url(http://image.tmdb.org/t/p/original${el.backdrop_path})`
+                  : 'url(https://images5.alphacoders.com/736/thumb-1920-736054.png)'
+              }`
             }
           }));
       }
