@@ -1,10 +1,7 @@
 <template>
   <div>
     <Header></Header>
-    <div id="app">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
-    </div>
+    <Banner></Banner>
   </div>
 </template>
 
@@ -21,14 +18,14 @@
 </style>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
   import Header from './containers/header/Header.vue'
+  import Banner from './components/banner/Banner.vue'
 
   export default {
     name: 'app',
     components: {
-      HelloWorld,
-      Header
+      Header,
+      Banner
     }
   }
 </script>
