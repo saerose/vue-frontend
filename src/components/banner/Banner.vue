@@ -52,7 +52,6 @@
             font-size: 0.8em
           .banner__list-element__content-info__overview
             font-size: 0.9em
-
         .banner__list-element__content-buttons
           .banner__list-element__content-buttons__element
             width: 14vw
@@ -70,8 +69,6 @@
       transform: translateX(0%)
     to
       transform: translateX(-1000%)
-
-
 </style>
 
 <script>
@@ -82,8 +79,6 @@
     data() {
       return {
         films: [],
-        poster: '',
-        moviePosters: '',
         baseUrl: `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.VUE_APP_API_KEY_V3}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1`
       }
     },
@@ -110,32 +105,3 @@
     }
   }
 </script>
-
-<!--<script>
-      fetchData () {
-        return fetch(`https://reqres.in/api/users?page=${this.page}`)
-          .then((response) => response.json())
-          .then((body) => {
-            this.maxPages = body.total_pages
-            this.users = body.data
-          })
-          .catch(err => {
-            this.err({
-              status: err.status,
-              message: 'Something went wrong whilst fetching users'
-            })
-          })
-      },
-      movePage ({target}) {
-        this.page += Number(target.value)
-        this.fetchData()
-      }
-    },
-    mounted () {
-      this.fetchData()
-    },
-    props: {
-      err: Function
-    }
-  }
-</script>-->
