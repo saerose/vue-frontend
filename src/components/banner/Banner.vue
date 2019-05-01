@@ -14,6 +14,7 @@
         </div>
       </div>
     </div>
+    <div class="banner__gradient"></div>
   </div>
 </template>
 
@@ -21,7 +22,7 @@
   @import '../../styles'
   .banner__list
     +flex ()
-    overflow-x: auto
+    overflow-x: hidden
     width: 100vw
     height: 70vh
     margin: 0 calc(50% - 50vw)
@@ -93,8 +94,8 @@
           .then((body) => {
             this.films = body.results
               .slice(0, 10)
-              .map(el => ({ ...el, backdrop_path: { 'background-image': `url(http://image.tmdb.org/t/p/original${el.backdrop_path})` } }));
-            console.log(this.films)
+              .map(el => ({ ...el, backdrop_path: {
+                'background-image': `linear-gradient(to bottom right,rgba(0,0,0,1),rgba(0,0,0,0)), url(http://image.tmdb.org/t/p/original${el.backdrop_path})` } }));
           })
           .catch(error => {
             this.error({
