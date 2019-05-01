@@ -1,8 +1,5 @@
-import { config } from 'dotenv'
 import Vue from 'vue'
 import App from './App.vue'
-
-config();
 
 Vue.config.productionTip = false;
 
