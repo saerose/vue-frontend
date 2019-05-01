@@ -1,6 +1,6 @@
 <template>
     <div class="films-list">
-      <div class="films-list__no" v-if="noRes"><span class="films-list__no-element">BIG BADA BOOM ☄️</span></div>
+      <div class="films-list__no" v-if="noRes"><span class="films-list__no-element">No movies match the specified title :(️</span></div>
       <div class="films-list__element" :style="film.backdrop_path" v-for="film of films">{{film.title}}</div>
     </div>
 </template>

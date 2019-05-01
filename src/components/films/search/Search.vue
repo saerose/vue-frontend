@@ -1,9 +1,9 @@
 <template>
   <div class="search">
-    <div class="search__no" v-if="!showInput" v-on:click="showSearchInput">🔎</div>
+    <div class="search__no" v-if="!showInput" v-on:click="toggleSearchInput">🔎</div>
     <div v-if="showInput">
       <input class="search__yes" v-model="userQuery" v-on:change="search" type="text" placeholder="🔍 Search...">
-      <span class="search__yes-close" v-on:click="showSearchInput">✕</span>
+      <span class="search__yes-close" v-on:click="toggleSearchInput">✕</span>
     </div>
   </div>
 </template>
@@ -44,7 +44,8 @@
       updateList: Function
     },
     methods: {
-      showSearchInput() {
+      toggleSearchInput() {
+        this.updateList(undefined)
         this.showInput = !this.showInput
       },
       search() {
