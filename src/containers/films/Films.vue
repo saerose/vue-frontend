@@ -5,7 +5,7 @@
         <div class="films__header-elements__title">Films</div>
         <div class="films__header-elements__filters">
           <div class="films__header-elements__filters-categories">Categories ↓</div>
-          <div class="films__header-elements__filters-search">🔎</div>
+          <Search></Search>
         </div>
       </div>
     </div>
@@ -34,21 +34,18 @@
             margin-right: 2vw
             border: 0.1em solid $magenta
             color: $magenta
-          .films__header-elements__filters-search
-            +flex($justify: center, $align: center)
-            width: 6vh
-            height: 6vh
-            border: 0.1em solid $magenta
 
 
 </style>
 
 <script>
   import FilmsList from '../../components/films-list/FilmsList'
+  import Search from '../../components/search/Search'
   export default {
     name: 'Films',
     components: {
-      FilmsList
+      FilmsList,
+      Search
     },
   }
 </script>
